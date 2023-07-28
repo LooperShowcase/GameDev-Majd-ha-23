@@ -1,0 +1,116 @@
+button {
+    box-shadow: 0px 0px 10px red;
+    background-color: rgb(26, 21, 121);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 20px;
+    transition: 0.3s;
+    width: auto; /* Remove fixed width to allow button to adjust based on content */
+    margin-top: 10px; /* Add some margin at the top */}
+    button:hover {
+        background-color: green;
+        cursor: pointer;}
+        body{
+            background: #355C7D;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #C06C84, #6C5B7B, #355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+        #cont {
+            display: flex;
+            
+            justify-content: right;
+            align-items: right;
+        }
+        #imgc {
+
+            display: flex;
+            flex-direction: column;
+        }
+        #question {
+            text-align: center; /* Center the element */
+            right: 100vw;
+          }
+          
+          #hidden-div {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.5);
+            float: none; /* Remove the float property on smaller screens */
+            display: none;
+          }
+#cards{
+    display: grid;
+    justify-content: center;
+    grid-gap: 16px;
+    grid-template-rows: repeat(3, 210px);
+    grid-template-columns: repeat(6, 140px);
+}
+.card {
+    height: 210px;
+    font-weight: 140px;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 500ms ease-in-out;
+}
+
+.front-image{
+    font-weight: 140px;
+    height: 140px;
+}
+.card.flipped {
+    transform:rotateY(180deg);
+}
+.font, .back {
+    backface-visibility:  hidden;
+position: absolute;
+border-radius: 10px;
+top: 0;
+left: 0;
+height:100%;
+width: 100%;
+}
+.card .front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.card .back{
+    background-image: url("Cardsimg.png");
+    background-position: center center;
+    background-size: cover;
+    backface-visibility: hidden;
+
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1000px) {
+    /* Adjust font sizes */
+    h1 {
+      font-size: 36px;
+    }
+    .cards {
+      grid-template-columns: repeat(3, 140px);
+      grid-template-rows: repeat(4, 210px);
+      grid-gap: 10px;
+    }
+  
+    .card {
+      height: 210px;
+      width: 140px;
+    }
+  
+    /* Adjust padding and font size for the restart button */
+    .actions button {
+      padding: 10px 20px;
+      font-size: 24px;
+    }
+}
